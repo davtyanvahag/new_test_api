@@ -20,8 +20,6 @@ export class AppService {
   }
 
   async searchUsers(text) {
-    console.log(text, this.users[0]['﻿First Names']?.toLowerCase().indexOf(text.text) >= 0,this.users[0]['Last Names']?.toLowerCase().indexOf(text.text) >= 0,
-      this.users[0]['email']?.toLowerCase().indexOf(text.text) >= 0, this.users[0]['﻿Company']?.toLowerCase().indexOf(text.text) >= 0)
     const filterdUsers = this.users.filter(el => {
       return el['﻿First Names']?.toLowerCase().indexOf(text.text) >= 0 || el['Last names']?.toLowerCase().indexOf(text.text) >= 0 ||
       el['email']?.indexOf(text.text) >= 0 || el['﻿Company']?.toLowerCase().indexOf(text.text) >= 0
